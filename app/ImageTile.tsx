@@ -19,6 +19,8 @@ const TileImage = async ({ altText, remoteSrc, localSrc, title }: Props) => {
   const src =
     process?.env?.NODE_ENV === "production" ? `${NEXT_URL}remoteSrc` : localSrc;
 
+  console.log("ImageTile -- src", src);
+
   const buffer = await fetch(`${NEXT_URL}${src}`).then(async (res) =>
     Buffer.from(await res.arrayBuffer())
   );
