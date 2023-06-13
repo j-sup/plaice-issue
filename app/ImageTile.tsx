@@ -23,7 +23,12 @@ const TileImage = async ({ altText, remoteSrc, localSrc, title }: Props) => {
 
   console.log("ImageTile -- src", src);
 
-  const buffer = await fetch(`${NEXT_URL}${src}`).then(async (res) =>
+  const fetchUrl =
+    process?.env?.NODE_ENV === "production"
+      ? `${NEXT_URL}${remoteSrc}`
+      : `${NEXT_URL}${src}`;
+
+  const buffer = await fetch(`${fetchUrl}`).then(async (res) =>
     Buffer.from(await res.arrayBuffer())
   );
   const { base64 } = await getPlaiceholder(buffer);
