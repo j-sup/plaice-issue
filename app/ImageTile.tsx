@@ -4,7 +4,7 @@ import { getPlaiceholder } from "plaiceholder";
 // Constants
 const NEXT_URL =
   process?.env?.NODE_ENV === "production"
-    ? "sample.com"
+    ? "http://sample.com"
     : "http://localhost:4001";
 
 // Types
