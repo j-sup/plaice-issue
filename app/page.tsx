@@ -15,7 +15,8 @@ export default function Home() {
           {blogPosts.map((p, i) => (
             <TileImage
               key={`tile-${i}`}
-              coverImage={p.coverImage}
+              remoteSrc={p.remoteSrc}
+              localSrc={p.localSrc}
               altText={p.alt}
               title={p.title}
             />
@@ -98,42 +99,50 @@ export default function Home() {
 
 const blogPosts = [
   {
-    coverImage: "/img-1.png",
+    remoteSrc: "/2rYWvnr3/img-1.png",
+    localSrc: "/img-1.png",
     alt: "post image",
     title: "post title",
   },
   {
-    coverImage: "/img-2.png",
+    remoteSrc: "/LJkRb0WL/img-2.png",
+    localSrc: "/img-2.png",
     alt: "post image",
     title: "post title",
   },
   {
-    coverImage: "/img-3.png",
+    remoteSrc: "/CxD8nvc/img-3.png",
+    localSrc: "/img-3.png",
     alt: "post image",
     title: "post title",
   },
   {
-    coverImage: "/img-4.png",
+    remoteSrc: "/R3XmMJ40/img-4.png",
+    localSrc: "/img-4.png",
     alt: "post image",
     title: "post title",
   },
   {
-    coverImage: "/img-5.png",
+    remoteSrc: "/R3XmMJ40/img-5.png",
+    localSrc: "/img-5.png",
     alt: "post image",
     title: "post title",
   },
   {
-    coverImage: "/img-6.png",
+    remoteSrc: "/87gNwVZT/img-6.png",
+    localSrc: "/img-6.png",
     alt: "post image",
     title: "post title",
   },
   {
-    coverImage: "/img-7.png",
+    remoteSrc: "/0r38MSmM/img-7.png",
+    localSrc: "/img-7.png",
     alt: "post image",
     title: "post title",
   },
   {
-    coverImage: "/img-8.png",
+    remoteSrc: "/2Lqr9jpS/img-8.png",
+    localSrc: "/img-8.png",
     alt: "post image",
     title: "post title",
   },
